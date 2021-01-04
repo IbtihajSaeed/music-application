@@ -1,0 +1,17 @@
+<mat-list color="primary">
+    <h3 mat-subheader><mat-icon color="primary" mat-list-icon class="pointer" [routerLink]="['']">keyboard_arrow_left</mat-icon>Songs</h3>
+    <mat-list-item *ngFor="let list of songsList; let i = index">
+      <mat-icon color="primary" mat-list-icon>music_note</mat-icon>
+ 
+      <h4 mat-line>{{ list.name }}</h4>
+      <h5 mat-line>by {{ list.artist }}</h5>
+    
+    <div style="float: right;">
+      <mat-chip> {{ list.Genre.name?list.Genre.name:'' }}</mat-chip>
+     
+    </div>
+     
+      <mat-divider></mat-divider>
+    </mat-list-item>
+    
+  </mat-list>

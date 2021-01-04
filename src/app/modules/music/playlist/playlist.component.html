@@ -1,0 +1,12 @@
+<mat-list color="primary">
+    <h3 mat-subheader>Playlist</h3>
+    <mat-list-item *ngFor="let list of playList; let i = index" >
+      <mat-icon color="primary" mat-list-icon>music_note</mat-icon>
+      <h4 mat-line (click)="getSongs(list.id)" class="pointer">{{ list.name }}</h4>
+     
+      <mat-icon color="primary" mat-list-icon (click)="play(list.id)" class="pointer">play_circle_filled</mat-icon>
+      <!-- <h6 *ngIf="currentFile.index === i && state?.error">ERROR</h6> -->
+      <mat-divider></mat-divider>
+    </mat-list-item>
+    
+  </mat-list>

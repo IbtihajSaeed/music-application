@@ -1,0 +1,15 @@
+<div class="container">
+    <mat-toolbar color="primary" class="main-toolbar">
+      <span>Music Application</span>
+    </mat-toolbar>
+    <div class="content">
+        <div class="logo">
+          <mat-icon>music_note</mat-icon>
+          <div>Audio Player</div>
+      </div>
+      
+      <router-outlet></router-outlet>
+    </div>
+    
+    <app-audio-player (songsList)="nextSong()"></app-audio-player>
+</div>
